@@ -1,0 +1,142 @@
+/* Yleinen tyyli ja retro-asetukset */
+body {
+    background-color: #000000; /* Musta tausta */
+    color: #FFFFFF; /* Valkoinen teksti */
+    font-family: 'Courier New', Courier, monospace; /* Courier tai vastaava */
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* Kaikki teksti isoilla kirjaimilla */
+.all-caps {
+    text-transform: uppercase;
+}
+
+/* Pääsisällön kontti */
+.content-container {
+    max-width: 800px; /* Rajaa leveyttä retro-tuntuman luomiseksi */
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Banneri ja pikseligradientti (Yläosa) --- */
+
+.header-banner {
+    background-color: #111;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 2px solid #555;
+}
+
+.pixel-gradient {
+    position: relative;
+    padding: 20px;
+    /* Luo portaittaisen gradientin käyttämällä toistuvaa lineaarista gradienttia */
+    background-image: repeating-linear-gradient(
+        0deg,
+        #000000,
+        #000000 1px,
+        #111111 1px,
+        #111111 2px,
+        #222222 2px,
+        #222222 3px,
+        #444444 3px,
+        #444444 4px,
+        #666666 4px,
+        #666666 5px,
+        #aaaaaa 5px,
+        #aaaaaa 6px,
+        #cccccc 6px,
+        #cccccc 7px,
+        #ffffff 7px,
+        #ffffff 8px /* Yksi 8 pikselin sykli mustasta valkoiseen */
+    );
+    /* Säädä gradientin kokoa ja sijoitusta */
+    background-size: 100% 8px; /* Tärkeää: korkeus vastaa sykliä */
+    background-repeat: repeat-y;
+}
+
+.pixel-gradient h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #FFF; /* Varmista, että teksti on luettavissa */
+    text-shadow: 2px 2px 0 #000; /* Lisää hieman tehostetta */
+}
+
+.pixel-gradient .subtitle {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* --- Soittolistaosio --- */
+
+.playlist {
+    margin-bottom: 40px;
+    padding-top: 15px;
+}
+
+.playlist h2 {
+    font-size: 1.8em;
+    margin: 0 0 5px 0;
+    color: #00FF00; /* Neon-vihreä otsikko tehosteena */
+    border-bottom: 1px dashed #333;
+    padding-bottom: 5px;
+}
+
+.metadata {
+    font-size: 0.9em;
+    color: #AAA;
+    margin: 0 0 10px 0;
+}
+
+.description {
+    font-style: italic; /* Kuvaus kursiivilla */
+    margin: 10px 0 20px 0;
+    color: #CCCCCC;
+}
+
+.track-list {
+    list-style: none; /* Poista perinteinen lista-merkki */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.track-list li {
+    padding: 3px 0;
+    border-bottom: 1px dotted #333;
+}
+
+/* ASCII-erotin */
+.ascii-art {
+    color: #00FF00; /* Neon-vihreä */
+    font-size: 0.8em;
+    margin: 40px auto 40px auto;
+    text-align: center;
+    white-space: pre; /* Säilytä ASCII-taiteen muotoilu */
+}
+
+/* --- Gradientilla leikkivä väliviivaelementti --- */
+
+.separator-line {
+    height: 4px; /* Viivan korkeus */
+    margin: 40px 0;
+    /* Sama gradientti, mutta vaakasuunnassa */
+    background-image: repeating-linear-gradient(
+        90deg, /* Gradientti vaakasuoraan */
+        #000000,
+        #000000 1px,
+        #222222 1px,
+        #222222 2px,
+        #444444 2px,
+        #444444 3px,
+        #888888 3px,
+        #888888 4px,
+        #CCCCCC 4px,
+        #CCCCCC 5px,
+        #ffffff 5px,
+        #ffffff 6px /* Sykli 6 pikseliä leveä */
+    );
+    background-size: 6px 100%;
+    background-repeat: repeat-x;
+}
